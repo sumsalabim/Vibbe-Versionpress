@@ -1,0 +1,18 @@
+.tagcloud {
+  padding: 5px 20px 10px;
+  .tag-cloud-link {
+    font-size: 11px !important;
+    background: #f1f1f1;
+    font-weight: 600;
+    padding: 6px 15px;
+    border-radius: 6px;
+    color: $primary;
+    transition: $transition-basic;
+    display: inline-block;
+    margin: 0px 8px 8px 0px;
+    &:hover {
+      color: $secondary;
+      background: #e5e5e5;
+    }
+  }
+}

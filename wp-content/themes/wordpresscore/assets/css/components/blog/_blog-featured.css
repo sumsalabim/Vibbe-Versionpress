@@ -1,0 +1,7 @@
+.blog--featured .blog-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.blog--featured .blog-item {
+  width: 20%; }

@@ -1,0 +1,54 @@
+
+// transition
+$transition-speed: 0.3s;
+$transition-animation: ease-in-out;
+$transition-basic: $transition-speed $transition-animation;
+
+// COLORS
+
+$white: #fff;
+$black: #000;
+$primary: #210233;
+$primary-bg: rgb(48, 2, 69);
+$secondary: #d20a35;
+
+
+// Gradient
+
+$primary-gradient: linear-gradient( 90deg, rgb( 161, 1, 90 ) 0%, rgb( 246, 46, 58 ) 100%);
+$primary-gradient-hover: linear-gradient( -90deg, rgb( 161, 1, 90 ) 0%, rgb( 246, 46, 58 ) 100%);
+$banner-gradient: linear-gradient(to right, #000428, #004e92);
+
+// type
+$font-family-basic: 'Nunito', sans-serif;
+
+$font-size-basic: 16px;
+$line-height-basic: 25px;
+
+// banner variables
+
+$font-size-banner-title: 48px;
+$font-size-banner-title-line-height: 54px;
+$font-size-banner-desc-line-height: 30px;
+$font-size-banner-desc: 16px;
+
+// section variables
+$backround-light-section: #f9f9f9;
+$backround-dark-section: #f1f1f1;
+$font-size-section-title: 32px;
+$font-size-section-subtitle: 20px;
+$font-size-section-desc: 16px;
+
+// cards variables
+$background-dark-card: #1f2124;
+$font-size-card-title: 16px;
+$font-size-card-desc: 13px;
+
+
+// menu variables
+
+$main-menu-font-size: 14px;
+$main-menu-color: rgba($white, 0.7);
+
+
+

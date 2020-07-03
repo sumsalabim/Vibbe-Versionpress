@@ -1,0 +1,47 @@
+@import "bootstrap/bootstrap";
+@import "plugins/animate";
+
+// GENERAL
+
+@import "general/variables";
+@import "general/general";
+
+// MENU
+
+@import "components/menu/menu.scss";
+@import "components/menu/submenu.scss";
+@import "components/menu/burger.scss";
+
+// OTHER
+
+@import "components/header";
+@import "components/banner";
+@import "components/section";
+@import "components/buttons";
+@import "components/footer";
+@import "components/contact";
+@import "components/form";
+@import "components/card";
+@import "components/lists";
+@import "components/cms";
+
+
+// BLOG
+
+@import "components/blog/blog";
+@import "components/blog/blog-featured";
+@import "components/blog/widget-categories";
+@import "components/blog/widget-archive";
+@import "components/blog/widget-media-image";
+@import "components/blog/widget-search";
+@import "components/blog/article";
+@import "components/blog/not-found";
+@import "components/blog/comments";
+@import "components/blog/widget-tags";
+
+
+// Plugins
+
+
+@import "plugins/swiper";
+@import "plugins/slick";

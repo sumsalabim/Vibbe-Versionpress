@@ -1,0 +1,224 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 40px 0px 0px;
+}
+.card {
+  padding: 30px;
+  border-radius: 6px;
+  background: $white;
+  box-shadow: 0px 2px 10px rgba($primary, 0.15);
+  margin-bottom: 20px;
+  &__icon {
+    text-align: center;
+    margin-bottom: 15px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    img {
+      width: auto;
+      max-height: 42px;
+    }
+  }
+  &__title {
+    font-size: $font-size-card-title;
+    font-weight: 700;
+    color: $primary;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  &__desc {
+    font-size: $font-size-card-desc;
+    color: rgba($primary, 0.7);
+    font-weight: 400;
+    text-align: center;
+  }
+  &--dark {
+    background: $background-dark-card;
+    .card {
+      &__title {
+        color: $white;
+      }
+      &__desc {
+        color: rgba($white, 0.7);
+      }
+    }
+  }
+  &--transparent {
+    background: transparent;
+    box-shadow: none;
+  }
+}
+@media (min-width: 992px) {
+  .cards {
+    &-lg {
+      &-1 {
+        margin-right: 0px;
+        .card {
+          width: 100%;
+          margin-right: 0px;
+        }
+      }
+      &-2 {
+        margin-right: -20px;
+        .card {
+          width: calc(50% - 20px);
+          margin-right: 20px;
+        }
+      }
+      &-3 {
+        margin-right: -20px;
+        .card {
+          width: calc(33.333% - 20px);
+          margin-right: 20px;
+        }
+      }
+      &-4 {
+        margin-right: -20px;
+        .card {
+          width: calc(25% - 20px);
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 991px) {
+  .cards {
+    &-md {
+      &-1 {
+        margin-right: 0px;
+        .card {
+          width: 100%;
+          margin-right: 0px;
+        }
+      }
+      &-2 {
+        margin-right: -20px;
+        .card {
+          width: calc(50% - 20px);
+          margin-right: 20px;
+        }
+      }
+      &-3 {
+        margin-right: -20px;
+        .card {
+          width: calc(33.333% - 20px);
+          margin-right: 20px;
+        }
+      }
+      &-4 {
+        margin-right: -20px;
+        .card {
+          width: calc(25% - 20px);
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .cards {
+    &-sm {
+      &-1 {
+        margin-right: 0px;
+        .card {
+          width: 100%;
+          margin-right: 0px;
+        }
+      }
+      &-2 {
+        margin-right: -20px;
+        .card {
+          width: calc(50% - 20px);
+          margin-right: 20px;
+        }
+      }
+      &-3 {
+        margin-right: -20px;
+        .card {
+          width: calc(33.333% - 20px);
+          margin-right: 20px;
+        }
+      }
+      &-4 {
+        margin-right: -20px;
+        .card {
+          width: calc(25% - 20px);
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 576px) {
+  .cards {
+    &-xs {
+      &-1 {
+        margin-right: 0px;
+        .card {
+          width: 100%;
+          margin-right: 0px;
+        }
+      }
+      &-2 {
+        margin-right: -20px;
+        .card {
+          width: calc(50% - 20px);
+          margin-right: 20px;
+        }
+      }
+      &-3 {
+        margin-right: -20px;
+        .card {
+          width: calc(33.333% - 20px);
+          margin-right: 20px;
+        }
+      }
+      &-4 {
+        margin-right: -20px;
+        .card {
+          width: calc(25% - 20px);
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 475px) {
+  .cards {
+    &-xxs {
+      &-1 {
+        margin-right: 0px;
+        .card {
+          width: 100%;
+          margin-right: 0px;
+        }
+      }
+      &-2 {
+        margin-right: -20px;
+        .card {
+          width: calc(50% - 20px);
+          margin-right: 20px;
+        }
+      }
+      &-3 {
+        margin-right: -20px;
+        .card {
+          width: calc(33.333% - 20px);
+          margin-right: 20px;
+        }
+      }
+      &-4 {
+        margin-right: -20px;
+        .card {
+          width: calc(25% - 20px);
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}

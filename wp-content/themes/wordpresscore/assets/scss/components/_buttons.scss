@@ -1,0 +1,80 @@
+.btn {
+  height: 48px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 35px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 600;
+  transition: $transition-basic;
+  &--primary {
+    border-radius: 30px;
+    background-image: $primary-gradient;
+    &:after {
+      content: '';
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 30px;
+      background-image: $primary-gradient-hover;
+      transition: $transition-basic;
+      opacity: 0;
+      visibility: hidden;
+    }
+    &:hover {
+      &:after {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+  &--outline {
+    border-radius: 30px;
+    border: 1px solid $white;
+    color: $white;
+    &:hover {
+      background: $white;
+      color: $black;
+    }
+    &-secondary {
+      border-radius: 30px;
+      border: 1px solid #e5e5e5;
+      color: $primary;
+      overflow: hidden;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 0%;
+        height: 100%;
+        left: 0;
+        background: #e5e5e5;
+        border-radius: 30px;
+        transition: $transition-basic;
+      }
+      &:hover {
+        &:before {
+          width: 100%;
+        }
+      }
+    }
+  }
+  &--form {
+    border-radius: 30px;
+    background: $secondary;
+    color: $white;
+  }
+  &__text {
+    color: $white;
+    position: relative;
+    z-index: 1;
+    font-weight: 500;
+    &--dark {
+      color: $primary;
+    }
+  }
+}

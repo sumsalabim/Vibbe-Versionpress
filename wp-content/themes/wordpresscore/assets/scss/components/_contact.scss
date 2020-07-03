@@ -1,0 +1,153 @@
+#map {
+
+}
+
+.contact {
+  &__map {
+    position: relative;
+  }
+
+  &__form {
+    position: relative;
+    background: $white;
+    z-index: 1;
+    border-radius: 5px;
+
+    &-content {
+      padding: 22px 25px;
+      background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='5' ry='5' stroke='%23C8C8C8FF' stroke-width='1' stroke-dasharray='12%2c12' stroke-dashoffset='0' stroke-linecap='round'/%3e%3c/svg%3e");
+      border-radius: 5px;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    margin-bottom: 25px;
+  }
+
+  &__info {
+
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__list {
+    list-style: none;
+    width: 50%;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    font-size: 15px;
+    line-height: 19px;
+    color: $primary;
+    font-weight: 600;
+    transition: $transition-basic;
+    display: flex;
+    padding: 12px 0px;
+    white-space: nowrap;
+
+    &:hover {
+      color: $secondary;
+      .zmdi {
+        color: $secondary;
+      }
+    }
+
+  }
+
+  &__icon {
+    width: 40px;
+    text-align: center;
+    margin-right: 15px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f1f1f1;
+    border-radius: 100%;
+
+    .zmdi {
+      font-size: 20px;
+      color: $primary;
+      transition: $transition-basic;
+    }
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 19px;
+    color: $primary;
+    font-weight: 600;
+    transition: $transition-basic;
+    display: flex;
+    padding: 12px 0px;
+    white-space: nowrap;
+
+    img {
+      margin-right: 15px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .contact {
+    &__info {
+      padding: 37px 0px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  #map {
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact {
+    &__list {
+      width: 50%;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .contact {
+    &__form {
+      padding: 10px;
+
+      &-content {
+        padding: 17px 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .contact {
+    &__info {
+      .contact__title {
+        text-align: center;
+      }
+    }
+
+    &__list {
+      width: 100%;
+    }
+
+    &__item {
+      justify-content: center;
+    }
+  }
+}

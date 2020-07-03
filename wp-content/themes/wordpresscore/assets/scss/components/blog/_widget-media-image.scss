@@ -1,0 +1,12 @@
+.widget_media_image {
+  margin-top: 15px;
+  a {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

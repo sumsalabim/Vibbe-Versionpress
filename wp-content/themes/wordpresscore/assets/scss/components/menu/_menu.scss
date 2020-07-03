@@ -1,0 +1,193 @@
+.main-navigation {
+  z-index: 1;
+  width: auto;
+
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    list-style: none;
+    margin-bottom: 0px;
+    margin-top: 10px;
+
+    > li {
+      position: relative;
+      padding-bottom: 10px;
+
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      > a {
+        position: relative;
+        display: flex;
+        align-items: center;
+        font-size: $main-menu-font-size;
+        line-height: 20px;
+        padding: 15px 20px;
+        color: $main-menu-color;
+        opacity: 1;
+        font-weight: 600;
+        transition: $transition-basic;
+        text-transform: uppercase;
+        text-shadow: 0 3px 6px rgba(0,0,0,0.5);
+
+        &:hover {
+          color: $white;
+        }
+      }
+
+      a[href="#pll_switcher"] {
+        position: relative;
+        font-size: 13px;
+        text-transform: uppercase;
+
+        img {
+          margin-top: -2px;
+          width: 15px;
+          height: 11px;
+        }
+
+        &:after {
+          content: '\f2f9';
+          font-family: 'Material-Design-Iconic-Font';
+          position: absolute;
+          right: 0px;
+          top: 50%;
+          transform: translateY(-50%);
+          color: $main-menu-color;
+          font-size: 14px;
+          z-index: 10;
+          transition: 0.3s ease-in-out;
+        }
+
+        @media (min-width: 767px) {
+          padding: 0px 15px 0px 0px;
+          margin-left: 15px;
+        }
+
+        &:hover {
+          &:after {
+            color: $white;
+          }
+        }
+      }
+
+      &.current-menu-item {
+        a {
+          color: $white;
+          opacity: 1;
+         &:after {
+           content: '';
+           position: absolute;
+           height: 1px;
+           width: calc(100% - 50px);
+           background: $white;
+           left: 50%;
+           transform: translateX(-50%);
+           bottom: 5px;
+         }
+        }
+      }
+
+      &:hover {
+        .sub-menu {
+          visibility: visible;
+          opacity: 1;
+          transform: translate(-50%, 0);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .main-navigation {
+    width: 100%;
+
+    .menu {
+      position: fixed;
+      top: 0px;
+      right: 0;
+      margin-top: 0px;
+      width: 60%;
+      background: #5d6069;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      transform: translateX(100%);
+      transition: $transition-basic;
+      visibility: hidden;
+      opacity: 0;
+      z-index: 98;
+      padding: 80px 10px 30px;
+      height: 100vh;
+      overflow-y: auto;
+
+      li {
+        &.menu-item-has-children {
+          width: 100%;
+
+          > a {
+            width: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            &:hover {
+              color: $white;
+
+              &:after {
+                color: $white;
+              }
+            }
+
+            &:after {
+              content: '\f2fc';
+              font-family: 'Material-Design-Iconic-Font';
+              position: absolute;
+              right: 10px;
+              top: 50%;
+              transform: translateY(-50%);
+              color: $white;
+              font-size: 18px;
+              padding: 6px 15px;
+              z-index: 10;
+              transition: $transition-basic;
+            }
+          }
+
+          &.submenu-open {
+            > a {
+              &:after {
+                transform: translateY(-50%) rotate(-180deg);
+              }
+            }
+
+            .sub-menu {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+
+    &.is-open {
+      .menu {
+        visibility: visible;
+        opacity: 0.99;
+        transform: translateX(0);
+        transition: $transition-basic;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .main-navigation {
+    .menu {
+      width: calc(100% - 95px);
+    }
+  }
+}

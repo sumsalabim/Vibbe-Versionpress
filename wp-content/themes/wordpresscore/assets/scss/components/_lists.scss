@@ -1,0 +1,30 @@
+.list-unstyled {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+.list {
+  &__item {
+    position: relative;
+    padding-left: 35px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #242531;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+    &:before {
+      content: '\f26b';
+      font-family: 'Material-Design-Iconic-Font';
+      color: $secondary;
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 22px;
+    }
+  }
+}

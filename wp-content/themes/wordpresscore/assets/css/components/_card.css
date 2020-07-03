@@ -1,0 +1,14 @@
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.card {
+  padding: 30px;
+  border-radius: 5px; }
+  .card--transparent {
+    background: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none; }

@@ -1,0 +1,97 @@
+// BURGER BUTTON
+
+.burger {
+  display: none;
+  background: transparent;
+  border-radius: 100%;
+  border: 0;
+  outline: none;
+  width: 40px;
+  height: 40px;
+  z-index: 99;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &__box {
+    position: relative;
+    height: 32px;
+    width: 32px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &__line {
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    height: 2px;
+    transition: $transition-basic;
+
+    &--1 {
+      background: $white;
+      top: 10px;
+    }
+
+    &--2 {
+      display: flex;
+      justify-content: space-between;
+      top: 19px;
+
+      &:after,
+      &:before {
+        content: '';
+        background: $white;
+      }
+
+      &:before {
+        width: 3px;
+        margin-right: 2px;
+      }
+
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .burger {
+    display: block;
+
+
+    &.is-active {
+      background: $white;
+      .burger {
+        &__box {
+          height: 26px;
+          width: 26px;
+        }
+        &__line {
+          top: 13px;
+          height: 2px;
+          left: 4px;
+          right: 2px;
+          background: $primary;
+
+          &--1 {
+            transform: rotate(45deg);
+          }
+
+          &--2 {
+            transform: rotate(-45deg);
+
+            &:before,
+            &:after {
+              content: unset;
+            }
+          }
+        }
+      }
+    }
+  }
+}
