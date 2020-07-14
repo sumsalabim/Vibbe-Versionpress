@@ -22,7 +22,7 @@ $title = "index";
       <div class="container container-relative">
         <div class="banner__content">
           <div class="banner__title">
-            The standard Lorem Ipsum passage
+            The standard Lorem Ipsum passage versionpress
           </div>
           <div class="banner__desc">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
